@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Wedding Invitation — Nama & Nama</title>
+  <meta name="description" content="Undangan Pernikahan Nama & Nama">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #f2f2f2;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root {
+      --black: #080808;
+      --dark: #101010;
+      --dark2: #171717;
+      --white: #f5f5f5;
+      --gray: #a8a8a8;
+      --line: rgba(255,255,255,.16);
+      --serif: "Cormorant Garamond", serif;
+      --sans: "Montserrat", sans-serif;
+    }
+
+    /* =========================================================
+       GLOBAL
+    ========================================================= */
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    section {
+      padding: 110px 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(45px, 7vw, 80px);
+      font-weight: 300;
+      line-height: .9;
+    }
+
+    .section-title span {
+      font-style: italic;
+    }
+
+    .divider {
+      width: 50px;
+      height: 1px;
+      background: #777;
+      margin: 25px 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center .divider {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .muted {
+      color: var(--gray);
+    }
+
+    /* =========================================================
+       OPENING
+    ========================================================= */
+
+    #opening {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: .8s ease;
+    }
+
+    #opening.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .opening-content {
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .opening-small {
+      font-size: 10px;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+
+    .opening-names {
+      font-family: var(--serif);
+      font-size: clamp(65px, 12vw, 130px);
+      line-height: .75;
+      font-weight: 300;
+    }
+
+    .opening-names em {
+      display: block;
+      font-size: .38em;
+      margin: 20px 0;
+      font-weight: 300;
+    }
+
+    .opening-date {
+      margin-top: 35px;
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    .open-button {
+      margin-top: 45px;
+      border: 1px solid rgba(255,255,255,.6);
+      background: transparent;
+      color: white;
+      padding: 15px 35px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 10px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .open-button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================================================
+       NAV
+    ========================================================= */
+
+    nav {
+      position: fixed;
+      z-index: 1000;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      background: rgba(20,20,20,.85);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--line);
+      border-radius: 50px;
+      padding: 7px;
+      display: flex;
+      gap: 5px;
+      opacity: 0;
+      transition: .5s;
+    }
+
+    nav.show {
+      opacity: 1;
+    }
+
+    nav a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 13px;
+      color: #aaa;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 100px;
+      background:
+        linear-gradient(0deg, #080808 0%, transparent 65%),
+        linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),
+        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+    }
+
+    .hero-text {
+      max-width: 850px;
+    }
+
+    .hero-subtitle {
+      font-size: 11px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero-names {
+      font-family: var(--serif);
+      font-size: clamp(70px, 13vw, 155px);
+      font-weight: 300;
+      line-height: .72;
+    }
+
+    .hero-names span {
+      font-style: italic;
+    }
+
+    .hero-date {
+      margin-top: 40px;
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    /* =========================================================
+       INTRO
+    ========================================================= */
+
+    .intro {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .intro-text {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .quote {
+      font-family: var(--serif);
+      font-size: clamp(30px, 5vw, 55px);
+      line-height: 1.1;
+      font-style: italic;
+    }
+
+    .quote-author {
+      margin-top: 30px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #888;
+    }
+
+    /* =========================================================
+       COUPLE
+    ========================================================= */
+
+    .couple-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 70px;
+    }
+
+    .person {
+      text-align: center;
+    }
+
+    .person-photo {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      margin-bottom: 30px;
+      filter: grayscale(100%);
+    }
+
+    .person-photo img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s;
+    }
+
+    .person:hover img {
+      transform: scale(1.04);
+    }
+
+    .person-name {
+      font-family: var(--serif);
+      font-size: 42px;
+      font-weight: 400;
+    }
+
+    .person-desc {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    /* =========================================================
+       COUNTDOWN
+    ========================================================= */
+
+    #countdown {
+      background: #111;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .count-item {
+      padding: 35px 10px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .count-item:last-child {
+      border-right: none;
+    }
+
+    .count-number {
+      font-family: var(--serif);
+      font-size: clamp(45px, 7vw, 75px);
+      font-weight: 300;
+    }
+
+    .count-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #888;
+      text-transform: uppercase;
+    }
+
+    /* =========================================================
+       EVENT
+    ========================================================= */
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      margin-top: 70px;
+    }
+
+    .event-card {
+      background: var(--black);
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .event-number {
+      font-family: var(--serif);
+      font-size: 70px;
+      color: #444;
+    }
+
+    .event-title {
+      font-family: var(--serif);
+      font-size: 45px;
+      margin: 10px 0;
+    }
+
+    .event-info {
+      color: #aaa;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .map-button {
+      display: inline-block;
+      border: 1px solid #555;
+      padding: 12px 25px;
+      margin-top: 25px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: .3s;
+    }
+
+    .map-button:hover {
+      background: white;
+      color: black;
+    }
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      margin-top: 60px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      filter: grayscale(100%);
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .g1 {
+      grid-column: span 7;
+      height: 550px;
+    }
+
+    .g2 {
+      grid-column: span 5;
+      height: 550px;
+    }
+
+    .g3 {
+      grid-column: span 4;
+      height: 400px;
+    }
+
+    .g4 {
+      grid-column: span 8;
+      height: 400px;
+    }
+
+    /* =========================================================
+       STORY
+    ========================================================= */
+
+    .story {
+      max-width: 750px;
+      margin: 70px auto 0;
+      position: relative;
+    }
+
+    .story::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .story-item {
+      width: 50%;
+      padding: 0 40px 70px;
+      position: relative;
+    }
+
+    .story-item:nth-child(even) {
+      margin-left: 50%;
+    }
+
+    .story-year {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .story-title {
+      font-family: var(--serif);
+      font-size: 38px;
+    }
+
+    .story-text {
+      color: #999;
+      font-size: 12px;
+      line-height: 1.9;
+      margin-top: 10px;
+    }
+
+    /* =========================================================
+       RSVP
+    ========================================================= */
+
+    #rsvp {
+      background: #f2f2f2;
+      color: #111;
+    }
+
+    #rsvp .eyebrow {
+      color: #777;
+    }
+
+    .rsvp-box {
+      max-width: 650px;
+      margin: 60px auto 0;
+      background: white;
+      padding: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: #777;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding: 12px 0;
+      font-family: inherit;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 16px;
+      cursor: pointer;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 9px;
+    }
+
+    /* =========================================================
+       WISHES
+    ========================================================= */
+
+    .wishes {
+      margin-top: 60px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .wish {
+      border: 1px solid var(--line);
+      padding: 25px;
+    }
+
+    .wish-name {
+      font-family: var(--serif);
+      font-size: 24px;
+    }
+
+    .wish-message {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    /* =========================================================
+       GIFT
+    ========================================================= */
+
+    .gift-card {
+      max-width: 550px;
+      margin: 60px auto 0;
+      border: 1px solid var(--line);
+      padding: 45px;
+      text-align: center;
+    }
+
+    .bank {
+      font-family: var(--serif);
+      font-size: 38px;
+    }
+
+    .account-number {
+      font-size: 22px;
+      letter-spacing: 3px;
+      margin: 15px 0;
+    }
+
+    .account-name {
+      font-size: 10px;
+      color: #888;
+      letter-spacing: 2px;
+    }
+
+    .copy-button {
+      margin-top: 25px;
+      background: transparent;
+      color: white;
+      border: 1px solid #555;
+      padding: 12px 25px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 100px 20px 130px;
+      text-align: center;
+      background: #050505;
+    }
+
+    .footer-names {
+      font-family: var(--serif);
+      font-size: clamp(50px, 9vw, 100px);
+      font-weight: 300;
+    }
+
+    .footer-date {
+      margin-top: 20px;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #777;
+    }
+
+    /* =========================================================
+       MUSIC
+    ========================================================= */
+
+    #musicButton {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2000;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid #555;
+      background: rgba(10,10,10,.8);
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       SCROLL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .9s ease, transform .9s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media(max-width: 700px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      #home {
+        min-height: 100svh;
+        padding-bottom: 80px;
+      }
+
+      .couple-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .count-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .count-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .event-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .g1,
+      .g2,
+      .g3,
+      .g4 {
+        grid-column: span 1;
+        height: 300px;
+      }
+
+      .g1,
+      .g4 {
+        grid-column: span 2;
+      }
+
+      .story::before {
+        left: 10px;
+      }
+
+      .story-item,
+      .story-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 40px;
+      }
+
+      .rsvp-box {
+        padding: 30px 20px;
+      }
+
+      nav a {
+        width: 35px;
+        height: 35px;
+      }
+
+      nav {
+        bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body class="locked">
+
+<!-- =========================================================
+     OPENING
+========================================================= -->
+
+<div id="opening">
+
+  <div class="opening-content">
+
+    <div class="opening-small">
+      The Wedding Of
+    </div>
+
+    <div class="opening-names">
+      Budi
+      <em>&</em>
+      Lusi
+    </div>
+
+    <div class="opening-date">
+      23 . 09 . 2026
+    </div>
+
+    <button class="open-button" onclick="openInvitation()">
+      Buka Undangan
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav id="navbar">
+
+  <a href="#home" title="Home">⌂</a>
+  <a href="#couple" title="Couple">♡</a>
+  <a href="#event" title="Event">◷</a>
+  <a href="#gallery" title="Gallery">▧</a>
+  <a href="#rsvp" title="RSVP">✓</a>
+
+</nav>
+
+
+<!-- =========================================================
+     MUSIC
+========================================================= -->
+
+<audio id="weddingMusic" loop>
+  <!-- Ganti URL musik di sini -->
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+  ♪
+</button>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home">
+
+  <div class="container">
+
+    <div class="hero-text reveal">
+
+      <div class="hero-subtitle">
+        We're getting married
+      </div>
+
+      <div class="hero-names">
+        Nama
+        <br>
+        <span>& Nama</span>
+      </div>
+
+      <div class="hero-date">
+        SABTU · 20 DESEMBER 2026
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="intro">
+
+  <div class="container">
+
+    <div class="intro-text reveal">
+
+      <div class="eyebrow">
+        A little beginning
+      </div>
+
+      <div class="quote">
+        "And suddenly all the love songs
+        were about you."
+      </div>
+
+      <div class="quote-author">
+        — OUR STORY
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     COUPLE
+========================================================= -->
+
+<section id="couple">
+
+  <div class="container">
+
+    <div class="center reveal">
+
+      <div class="eyebrow">
+        The Couple
+      </div>
+
+      <div class="section-title">
+        Two souls,
+        <br>
+        <span>one story.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="muted">
+        Dengan penuh kebahagiaan, kami mengundang
+        Anda untuk menjadi bagian dari hari istimewa kami.
+      </p>
+
+    </div>
+
+
+    <div class="couple-grid">
+
+      <div class="person reveal">
+
+        <div class="person-photo">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
+            alt="Mempelai Pria">
+        </div>
+
+        <div class="person-name">
+          Nama Pria
+        </div>
+
+        <div class="person-desc">
+          Putra dari Bapak Nama & Ibu Nama
+        </div>
+
+      </div>
+
+
+      <div class="person reveal">
+
+        <div class="person-photo">
+          <img
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=85"
+            alt="Mempelai Wanita">
+        </div>
+
+        <div class="person-name">
+          Nama Wanita
+        </div>
+
+        <div class="person-desc">
+          Putri dari Bapak Nama & Ibu Nama
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  
