@@ -1,1137 +1,1133 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Wedding Invitation — Budi & Lusi</title>
-  <meta name="description" content="Undangan Pernikahan Budi & Lusi">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <style>
-
-    /* =====================================================
-       RESET
-    ===================================================== */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #080808;
-      color: #f2f2f2;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    body.locked {
-      overflow: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font-family: inherit;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    :root {
-      --black: #080808;
-      --dark: #101010;
-      --dark2: #171717;
-      --white: #f5f5f5;
-      --gray: #a8a8a8;
-      --line: rgba(255,255,255,.16);
-
-      --serif: "Cormorant Garamond", serif;
-      --sans: "Montserrat", sans-serif;
-    }
-
-
-    /* =====================================================
-       GLOBAL
-    ===================================================== */
-
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
-
-    section {
-      padding: 110px 0;
-      position: relative;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 15px;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(45px, 7vw, 80px);
-      font-weight: 300;
-      line-height: .9;
-    }
-
-    .section-title span {
-      font-style: italic;
-    }
-
-    .divider {
-      width: 50px;
-      height: 1px;
-      background: #777;
-      margin: 25px 0;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .center .divider {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .muted {
-      color: var(--gray);
-      line-height: 1.8;
-    }
-
-
-    /* =====================================================
-       OPENING
-    ===================================================== */
-
-    #opening {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-
-      background:
-        linear-gradient(
-          rgba(0,0,0,.45),
-          rgba(0,0,0,.88)
-        ),
-        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      transition:
-        opacity .8s ease,
-        visibility .8s ease;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wedding Invitation — Budi & Lusi</title>
+<meta name="description" content="Undangan Pernikahan Budi & Lusi">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+:root {
+  --black: #080808;
+  --dark: #101010;
+  --dark2: #171717;
+  --white: #f5f5f5;
+  --gray: #a8a8a8;
+  --line: rgba(255,255,255,.16);
+
+  --serif: "Cormorant Garamond", serif;
+  --sans: "Montserrat", sans-serif;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+section {
+  padding: 110px 0;
+  position: relative;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(45px, 7vw, 80px);
+  font-weight: 300;
+  line-height: .9;
+}
+
+.section-title span {
+  font-style: italic;
+}
+
+.divider {
+  width: 50px;
+  height: 1px;
+  background: #777;
+  margin: 25px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.center .divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.muted {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   OPENING
+===================================================== */
+
+#opening {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,.45),
+      rgba(0,0,0,.88)
+    ),
+    url("foto-cover.jpg")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  transition:
+    opacity .8s ease,
+    visibility .8s ease;
+}
+
+#opening.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.opening-content {
+  width: 90%;
+  max-width: 700px;
+}
+
+.opening-small {
+  font-size: 10px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
 
-    #opening.hide {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-
-    .opening-content {
-      width: 90%;
-      max-width: 700px;
-    }
-
-    .opening-small {
-      font-size: 10px;
-      letter-spacing: 7px;
-      text-transform: uppercase;
-      margin-bottom: 35px;
-    }
+.opening-names {
+  font-family: var(--serif);
+  font-size: clamp(65px, 12vw, 130px);
+  line-height: .75;
+  font-weight: 300;
+}
 
-    .opening-names {
-      font-family: var(--serif);
-      font-size: clamp(65px, 12vw, 130px);
-      line-height: .75;
-      font-weight: 300;
-    }
+.opening-names em {
+  display: block;
+  font-size: .38em;
+  margin: 20px 0;
+  font-weight: 300;
+}
 
-    .opening-names em {
-      display: block;
-      font-size: .38em;
-      margin: 20px 0;
-      font-weight: 300;
-    }
+.opening-date {
+  margin-top: 35px;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
 
-    .opening-date {
-      margin-top: 35px;
-      font-size: 11px;
-      letter-spacing: 4px;
-    }
+.open-button {
+  margin-top: 45px;
 
-    .open-button {
-      margin-top: 45px;
+  border: 1px solid rgba(255,255,255,.6);
+  background: transparent;
+  color: white;
 
-      border: 1px solid rgba(255,255,255,.6);
-      background: transparent;
-      color: white;
+  padding: 15px 35px;
 
-      padding: 15px 35px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 10px;
 
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
 
-      cursor: pointer;
+.open-button:hover {
+  background: white;
+  color: black;
+}
 
-      transition: .3s;
-    }
+.open-button:active {
+  transform: scale(.96);
+}
 
-    .open-button:hover {
-      background: white;
-      color: black;
-    }
 
-    .open-button:active {
-      transform: scale(.96);
-    }
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
+nav {
+  position: fixed;
+  z-index: 1000;
 
-    /* =====================================================
-       NAVIGATION
-    ===================================================== */
+  bottom: 20px;
+  left: 50%;
 
-    nav {
-      position: fixed;
-      z-index: 1000;
+  transform: translateX(-50%);
 
-      bottom: 20px;
-      left: 50%;
+  width: auto;
 
-      transform: translateX(-50%);
+  background: rgba(20,20,20,.85);
+  backdrop-filter: blur(15px);
 
-      width: auto;
+  border: 1px solid var(--line);
+  border-radius: 50px;
 
-      background: rgba(20,20,20,.85);
-      backdrop-filter: blur(15px);
+  padding: 7px;
 
-      border: 1px solid var(--line);
-      border-radius: 50px;
+  display: flex;
+  gap: 5px;
 
-      padding: 7px;
+  opacity: 0;
+  visibility: hidden;
 
-      display: flex;
-      gap: 5px;
+  transition: .5s;
+}
 
-      opacity: 0;
-      visibility: hidden;
+nav.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-      transition: .5s;
-    }
+nav a {
+  width: 40px;
+  height: 40px;
 
-    nav.show {
-      opacity: 1;
-      visibility: visible;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    nav a {
-      width: 40px;
-      height: 40px;
+  border-radius: 50%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  font-size: 13px;
+  color: #aaa;
 
-      border-radius: 50%;
+  transition: .3s;
+}
 
-      font-size: 13px;
-      color: #aaa;
+nav a:hover {
+  background: white;
+  color: black;
+}
 
-      transition: .3s;
-    }
 
-    nav a:hover {
-      background: white;
-      color: black;
-    }
+/* =====================================================
+   MUSIC
+===================================================== */
 
+#weddingMusic {
+  display: none;
+}
 
-    /* =====================================================
-       MUSIC
-    ===================================================== */
+#musicButton {
+  position: fixed;
 
-    #musicButton {
-      position: fixed;
+  right: 20px;
+  bottom: 20px;
 
-      right: 20px;
-      bottom: 20px;
+  z-index: 2000;
 
-      z-index: 2000;
+  width: 45px;
+  height: 45px;
 
-      width: 45px;
-      height: 45px;
+  border-radius: 50%;
 
-      border-radius: 50%;
+  border: 1px solid #555;
 
-      border: 1px solid #555;
+  background: rgba(10,10,10,.8);
+  color: white;
 
-      background: rgba(10,10,10,.8);
-      color: white;
+  cursor: pointer;
 
-      cursor: pointer;
+  font-size: 14px;
 
-      font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
 
-      opacity: 0;
-      visibility: hidden;
+  transition: .4s;
+}
 
-      transition: .4s;
-    }
+#musicButton.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-    #musicButton.show {
-      opacity: 1;
-      visibility: visible;
-    }
+#musicButton.playing {
+  animation: musicPulse 1.5s infinite;
+}
 
-    #musicButton.playing {
-      animation: musicPulse 1.5s infinite;
-    }
+@keyframes musicPulse {
+  0%,100% {
+    transform: scale(1);
+  }
 
-    @keyframes musicPulse {
-      0%,100% {
-        transform: scale(1);
-      }
+  50% {
+    transform: scale(1.08);
+  }
+}
 
-      50% {
-        transform: scale(1.08);
-      }
-    }
 
+/* =====================================================
+   HERO
+===================================================== */
 
-    /* =====================================================
-       HERO
-    ===================================================== */
+#home {
+  min-height: 100vh;
 
-    #home {
-      min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
 
-      display: flex;
-      align-items: flex-end;
+  padding-bottom: 100px;
 
-      padding-bottom: 100px;
+  background:
+    linear-gradient(
+      0deg,
+      #080808 0%,
+      transparent 65%
+    ),
+    linear-gradient(
+      rgba(0,0,0,.2),
+      rgba(0,0,0,.2)
+    ),
+    url("foto-hero.jpg")
+    center/cover no-repeat;
+}
 
-      background:
-        linear-gradient(
-          0deg,
-          #080808 0%,
-          transparent 65%
-        ),
-        linear-gradient(
-          rgba(0,0,0,.2),
-          rgba(0,0,0,.2)
-        ),
-        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=85")
-        center/cover no-repeat;
-    }
+.hero-text {
+  max-width: 850px;
+}
 
-    .hero-text {
-      max-width: 850px;
-    }
+.hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
 
-    .hero-subtitle {
-      font-size: 11px;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
+.hero-names {
+  font-family: var(--serif);
+  font-size: clamp(70px, 13vw, 155px);
 
-    .hero-names {
-      font-family: var(--serif);
-      font-size: clamp(70px, 13vw, 155px);
+  font-weight: 300;
+  line-height: .72;
+}
 
-      font-weight: 300;
-      line-height: .72;
-    }
+.hero-names span {
+  font-style: italic;
+}
 
-    .hero-names span {
-      font-style: italic;
-    }
+.hero-date {
+  margin-top: 40px;
 
-    .hero-date {
-      margin-top: 40px;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
 
-      font-size: 11px;
-      letter-spacing: 4px;
-    }
 
+/* =====================================================
+   INTRO
+===================================================== */
 
-    /* =====================================================
-       INTRO
-    ===================================================== */
+.intro {
+  min-height: 70vh;
 
-    .intro {
-      min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
 
-      display: flex;
-      align-items: center;
-    }
+.intro-text {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
 
-    .intro-text {
-      max-width: 700px;
+.quote {
+  font-family: var(--serif);
 
-      margin: auto;
+  font-size: clamp(30px, 5vw, 55px);
 
-      text-align: center;
-    }
+  line-height: 1.1;
 
-    .quote {
-      font-family: var(--serif);
+  font-style: italic;
+}
 
-      font-size: clamp(30px, 5vw, 55px);
+.quote-author {
+  margin-top: 30px;
 
-      line-height: 1.1;
+  font-size: 10px;
+  letter-spacing: 4px;
 
-      font-style: italic;
-    }
+  color: #888;
+}
 
-    .quote-author {
-      margin-top: 30px;
 
-      font-size: 10px;
-      letter-spacing: 4px;
+/* =====================================================
+   COUPLE
+===================================================== */
 
-      color: #888;
-    }
+.couple-grid {
+  display: grid;
 
+  grid-template-columns: 1fr 1fr;
 
-    /* =====================================================
-       COUPLE
-    ===================================================== */
+  gap: 50px;
 
-    .couple-grid {
-      display: grid;
+  margin-top: 70px;
+}
 
-      grid-template-columns: 1fr 1fr;
+.person {
+  text-align: center;
+}
 
-      gap: 50px;
+.person-photo {
+  aspect-ratio: 3 / 4;
 
-      margin-top: 70px;
-    }
+  overflow: hidden;
 
-    .person {
-      text-align: center;
-    }
+  margin-bottom: 30px;
 
-    .person-photo {
-      aspect-ratio: 3 / 4;
+  filter: grayscale(100%);
+}
 
-      overflow: hidden;
+.person-photo img {
+  height: 100%;
 
-      margin-bottom: 30px;
+  object-fit: cover;
 
-      filter: grayscale(100%);
-    }
+  transition: transform .8s;
+}
 
-    .person-photo img {
-      height: 100%;
+.person:hover img {
+  transform: scale(1.04);
+}
 
-      object-fit: cover;
+.person-name {
+  font-family: var(--serif);
 
-      transition: transform .8s;
-    }
+  font-size: 42px;
 
-    .person:hover img {
-      transform: scale(1.04);
-    }
+  font-weight: 400;
+}
 
-    .person-name {
-      font-family: var(--serif);
+.person-desc {
+  font-size: 10px;
 
-      font-size: 42px;
+  letter-spacing: 2px;
 
-      font-weight: 400;
-    }
+  text-transform: uppercase;
 
-    .person-desc {
-      font-size: 10px;
+  color: #888;
 
-      letter-spacing: 2px;
+  margin-top: 10px;
+}
 
-      text-transform: uppercase;
 
-      color: #888;
+/* =====================================================
+   COUNTDOWN
+===================================================== */
 
-      margin-top: 10px;
-    }
+#countdown {
+  background: #111;
+}
 
+.countdown {
+  display: grid;
 
-    /* =====================================================
-       COUNTDOWN
-    ===================================================== */
+  grid-template-columns: repeat(4, 1fr);
 
-    #countdown {
-      background: #111;
-    }
+  margin-top: 60px;
 
-    .countdown {
-      display: grid;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
-      grid-template-columns: repeat(4, 1fr);
+.count-item {
+  padding: 35px 10px;
 
-      margin-top: 60px;
+  text-align: center;
 
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
+  border-right: 1px solid var(--line);
+}
 
-    .count-item {
-      padding: 35px 10px;
+.count-item:last-child {
+  border-right: none;
+}
 
-      text-align: center;
+.count-number {
+  font-family: var(--serif);
 
-      border-right: 1px solid var(--line);
-    }
+  font-size: clamp(45px, 7vw, 75px);
 
-    .count-item:last-child {
-      border-right: none;
-    }
+  font-weight: 300;
+}
 
-    .count-number {
-      font-family: var(--serif);
+.count-label {
+  font-size: 9px;
 
-      font-size: clamp(45px, 7vw, 75px);
+  letter-spacing: 3px;
 
-      font-weight: 300;
-    }
+  color: #888;
 
-    .count-label {
-      font-size: 9px;
+  text-transform: uppercase;
+}
 
-      letter-spacing: 3px;
 
-      color: #888;
+/* =====================================================
+   EVENT
+===================================================== */
 
-      text-transform: uppercase;
-    }
+.event-grid {
+  display: grid;
 
+  grid-template-columns: 1fr 1fr;
 
-    /* =====================================================
-       EVENT
-    ===================================================== */
+  gap: 1px;
 
-    .event-grid {
-      display: grid;
+  background: var(--line);
 
-      grid-template-columns: 1fr 1fr;
+  margin-top: 70px;
+}
 
-      gap: 1px;
+.event-card {
+  background: var(--black);
 
-      background: var(--line);
+  padding: 60px 30px;
 
-      margin-top: 70px;
-    }
+  text-align: center;
+}
 
-    .event-card {
-      background: var(--black);
+.event-number {
+  font-family: var(--serif);
 
-      padding: 60px 30px;
+  font-size: 70px;
 
-      text-align: center;
-    }
+  color: #444;
+}
 
-    .event-number {
-      font-family: var(--serif);
+.event-title {
+  font-family: var(--serif);
 
-      font-size: 70px;
+  font-size: 45px;
 
-      color: #444;
-    }
+  margin: 10px 0;
+}
 
-    .event-title {
-      font-family: var(--serif);
+.event-info {
+  color: #aaa;
 
-      font-size: 45px;
+  font-size: 11px;
 
-      margin: 10px 0;
-    }
+  line-height: 2;
+}
 
-    .event-info {
-      color: #aaa;
+.map-button {
+  display: inline-block;
 
-      font-size: 11px;
+  border: 1px solid #555;
 
-      line-height: 2;
-    }
+  padding: 12px 25px;
 
-    .map-button {
-      display: inline-block;
+  margin-top: 25px;
 
-      border: 1px solid #555;
+  font-size: 9px;
 
-      padding: 12px 25px;
+  letter-spacing: 3px;
 
-      margin-top: 25px;
+  text-transform: uppercase;
 
-      font-size: 9px;
+  transition: .3s;
+}
 
-      letter-spacing: 3px;
+.map-button:hover {
+  background: white;
+  color: black;
+}
 
-      text-transform: uppercase;
 
-      transition: .3s;
-    }
+/* =====================================================
+   GALLERY
+===================================================== */
 
-    .map-button:hover {
-      background: white;
-      color: black;
-    }
+.gallery {
+  display: grid;
 
+  grid-template-columns: repeat(12, 1fr);
 
-    /* =====================================================
-       GALLERY
-    ===================================================== */
+  gap: 12px;
 
-    .gallery {
-      display: grid;
+  margin-top: 60px;
+}
 
-      grid-template-columns: repeat(12, 1fr);
+.gallery-item {
+  overflow: hidden;
 
-      gap: 12px;
+  filter: grayscale(100%);
+}
 
-      margin-top: 60px;
-    }
+.gallery-item img {
+  height: 100%;
 
-    .gallery-item {
-      overflow: hidden;
+  object-fit: cover;
 
-      filter: grayscale(100%);
-    }
+  transition: transform .7s;
+}
 
-    .gallery-item img {
-      height: 100%;
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
 
-      object-fit: cover;
+.g1 {
+  grid-column: span 7;
+  height: 550px;
+}
 
-      transition: transform .7s;
-    }
+.g2 {
+  grid-column: span 5;
+  height: 550px;
+}
 
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
+.g3 {
+  grid-column: span 4;
+  height: 400px;
+}
 
-    .g1 {
-      grid-column: span 7;
-      height: 550px;
-    }
+.g4 {
+  grid-column: span 8;
+  height: 400px;
+}
 
-    .g2 {
-      grid-column: span 5;
-      height: 550px;
-    }
 
-    .g3 {
-      grid-column: span 4;
-      height: 400px;
-    }
+/* =====================================================
+   STORY
+===================================================== */
 
-    .g4 {
-      grid-column: span 8;
-      height: 400px;
-    }
+.story {
+  max-width: 750px;
 
+  margin: 70px auto 0;
 
-    /* =====================================================
-       STORY
-    ===================================================== */
+  position: relative;
+}
 
-    .story {
-      max-width: 750px;
+.story::before {
+  content: "";
 
-      margin: 70px auto 0;
+  position: absolute;
 
-      position: relative;
-    }
+  top: 0;
+  bottom: 0;
 
-    .story::before {
-      content: "";
+  left: 50%;
 
-      position: absolute;
+  width: 1px;
 
-      top: 0;
-      bottom: 0;
+  background: var(--line);
+}
 
-      left: 50%;
+.story-item {
+  width: 50%;
 
-      width: 1px;
+  padding: 0 40px 70px;
 
-      background: var(--line);
-    }
+  position: relative;
+}
 
-    .story-item {
-      width: 50%;
+.story-item:nth-child(even) {
+  margin-left: 50%;
+}
 
-      padding: 0 40px 70px;
+.story-year {
+  font-size: 10px;
 
-      position: relative;
-    }
+  letter-spacing: 4px;
 
-    .story-item:nth-child(even) {
-      margin-left: 50%;
-    }
+  color: #888;
 
-    .story-year {
-      font-size: 10px;
+  margin-bottom: 10px;
+}
 
-      letter-spacing: 4px;
+.story-title {
+  font-family: var(--serif);
 
-      color: #888;
+  font-size: 38px;
+}
 
-      margin-bottom: 10px;
-    }
+.story-text {
+  color: #999;
 
-    .story-title {
-      font-family: var(--serif);
+  font-size: 12px;
 
-      font-size: 38px;
-    }
+  line-height: 1.9;
 
-    .story-text {
-      color: #999;
+  margin-top: 10px;
+}
 
-      font-size: 12px;
 
-      line-height: 1.9;
+/* =====================================================
+   RSVP
+===================================================== */
 
-      margin-top: 10px;
-    }
+#rsvp {
+  background: #f2f2f2;
 
+  color: #111;
+}
 
-    /* =====================================================
-       RSVP
-    ===================================================== */
+#rsvp .eyebrow {
+  color: #777;
+}
 
-    #rsvp {
-      background: #f2f2f2;
+#rsvp .muted {
+  color: #666;
+}
 
-      color: #111;
-    }
+.rsvp-box {
+  max-width: 650px;
 
-    #rsvp .eyebrow {
-      color: #777;
-    }
+  margin: 60px auto 0;
 
-    .rsvp-box {
-      max-width: 650px;
+  background: white;
 
-      margin: 60px auto 0;
+  padding: 50px;
+}
 
-      background: white;
+.form-group {
+  margin-bottom: 20px;
+}
 
-      padding: 50px;
-    }
+.form-group label {
+  display: block;
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+  font-size: 9px;
 
-    .form-group label {
-      display: block;
+  letter-spacing: 2px;
 
-      font-size: 9px;
+  text-transform: uppercase;
 
-      letter-spacing: 2px;
+  margin-bottom: 8px;
 
-      text-transform: uppercase;
+  color: #777;
+}
 
-      margin-bottom: 8px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
 
-      color: #777;
-    }
+  border: none;
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
+  border-bottom: 1px solid #ccc;
 
-      border: none;
+  padding: 12px 0;
 
-      border-bottom: 1px solid #ccc;
+  font-family: inherit;
 
-      padding: 12px 0;
+  outline: none;
 
-      font-family: inherit;
+  background: transparent;
 
-      outline: none;
+  font-size: 13px;
+}
 
-      background: transparent;
+.form-group textarea {
+  min-height: 100px;
 
-      font-size: 13px;
-    }
+  resize: vertical;
+}
 
-    .form-group textarea {
-      min-height: 100px;
+.submit-button {
+  width: 100%;
 
-      resize: vertical;
-    }
+  background: #111;
 
-    .submit-button {
-      width: 100%;
+  color: white;
 
-      background: #111;
+  border: none;
 
-      color: white;
+  padding: 16px;
 
-      border: none;
+  cursor: pointer;
 
-      padding: 16px;
+  letter-spacing: 3px;
 
-      cursor: pointer;
+  text-transform: uppercase;
 
-      letter-spacing: 3px;
+  font-size: 9px;
+}
 
-      text-transform: uppercase;
+.submit-button:hover {
+  background: #333;
+}
 
-      font-size: 9px;
-    }
 
-    .submit-button:hover {
-      background: #333;
-    }
+/* =====================================================
+   WISHES
+===================================================== */
 
+#wishes {
+  background: #101010;
+}
 
-    /* =====================================================
-       WISHES
-    ===================================================== */
+.wishes {
+  margin-top: 60px;
 
-    #wishes {
-      background: #101010;
-    }
+  display: grid;
 
-    .wishes {
-      margin-top: 60px;
+  gap: 15px;
+}
 
-      display: grid;
+.wish {
+  border: 1px solid var(--line);
 
-      gap: 15px;
-    }
+  padding: 25px;
+}
 
-    .wish {
-      border: 1px solid var(--line);
+.wish-name {
+  font-family: var(--serif);
 
-      padding: 25px;
-    }
+  font-size: 24px;
+}
 
-    .wish-name {
-      font-family: var(--serif);
+.wish-message {
+  margin-top: 8px;
 
-      font-size: 24px;
-    }
+  font-size: 11px;
 
-    .wish-message {
-      margin-top: 8px;
+  color: #999;
 
-      font-size: 11px;
+  line-height: 1.8;
+}
 
-      color: #999;
+.empty-wishes {
+  color: #777;
 
-      line-height: 1.8;
-    }
+  text-align: center;
 
-    .empty-wishes {
-      color: #777;
+  font-size: 11px;
 
-      text-align: center;
+  padding: 30px;
+}
 
-      font-size: 11px;
 
-      padding: 30px;
-    }
+/* =====================================================
+   GIFT
+===================================================== */
 
+.gift-card {
+  max-width: 550px;
 
-    /* =====================================================
-       GIFT
-    ===================================================== */
+  margin: 60px auto 0;
 
-    .gift-card {
-      max-width: 550px;
+  border: 1px solid var(--line);
 
-      margin: 60px auto 0;
+  padding: 45px;
 
-      border: 1px solid var(--line);
+  text-align: center;
+}
 
-      padding: 45px;
+.bank {
+  font-family: var(--serif);
 
-      text-align: center;
-    }
+  font-size: 38px;
+}
 
-    .bank {
-      font-family: var(--serif);
+.account-number {
+  font-size: 22px;
 
-      font-size: 38px;
-    }
+  letter-spacing: 3px;
 
-    .account-number {
-      font-size: 22px;
+  margin: 15px 0;
+}
 
-      letter-spacing: 3px;
+.account-name {
+  font-size: 10px;
 
-      margin: 15px 0;
-    }
+  color: #888;
 
-    .account-name {
-      font-size: 10px;
+  letter-spacing: 2px;
+}
 
-      color: #888;
+.copy-button {
+  margin-top: 25px;
 
-      letter-spacing: 2px;
-    }
+  background: transparent;
 
-    .copy-button {
-      margin-top: 25px;
+  color: white;
 
-      background: transparent;
+  border: 1px solid #555;
 
-      color: white;
+  padding: 12px 25px;
 
-      border: 1px solid #555;
+  font-size: 9px;
 
-      padding: 12px 25px;
+  letter-spacing: 3px;
 
-      font-size: 9px;
+  cursor: pointer;
+}
 
-      letter-spacing: 3px;
+.copy-button:hover {
+  background: white;
 
-      cursor: pointer;
-    }
+  color: black;
+}
 
-    .copy-button:hover {
-      background: white;
 
-      color: black;
-    }
+/* =====================================================
+   FOOTER
+===================================================== */
 
+footer {
+  padding: 100px 20px 130px;
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+  text-align: center;
 
-    footer {
-      padding: 100px 20px 130px;
+  background: #050505;
+}
 
-      text-align: center;
+.footer-names {
+  font-family: var(--serif);
 
-      background: #050505;
-    }
+  font-size: clamp(50px, 9vw, 100px);
 
-    .footer-names {
-      font-family: var(--serif);
+  font-weight: 300;
+}
 
-      font-size: clamp(50px, 9vw, 100px);
+.footer-date {
+  margin-top: 20px;
 
-      font-weight: 300;
-    }
+  font-size: 10px;
 
-    .footer-date {
-      margin-top: 20px;
+  letter-spacing: 5px;
 
-      font-size: 10px;
+  color: #777;
+}
 
-      letter-spacing: 5px;
 
-      color: #777;
-    }
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
 
+.reveal {
+  opacity: 0;
 
-    /* =====================================================
-       SCROLL REVEAL
-    ===================================================== */
+  transform: translateY(35px);
 
-    .reveal {
-      opacity: 0;
+  transition:
+    opacity .9s ease,
+    transform .9s ease;
+}
 
-      transform: translateY(35px);
+.reveal.active {
+  opacity: 1;
 
-      transition:
-        opacity .9s ease,
-        transform .9s ease;
-    }
+  transform: translateY(0);
+}
 
-    .reveal.active {
-      opacity: 1;
 
-      transform: translateY(0);
-    }
+/* =====================================================
+   TOAST
+===================================================== */
 
+#toast {
+  position: fixed;
 
-    /* =====================================================
-       TOAST
-    ===================================================== */
+  left: 50%;
+  bottom: 90px;
 
-    #toast {
-      position: fixed;
+  transform: translateX(-50%) translateY(20px);
 
-      left: 50%;
-      bottom: 90px;
+  background: white;
 
-      transform: translateX(-50%) translateY(20px);
+  color: black;
 
-      background: white;
+  padding: 12px 20px;
 
-      color: black;
+  font-size: 10px;
 
-      padding: 12px 20px;
+  letter-spacing: 1px;
 
-      font-size: 10px;
+  z-index: 10000;
 
-      letter-spacing: 1px;
+  opacity: 0;
 
-      z-index: 10000;
+  visibility: hidden;
 
-      opacity: 0;
+  transition: .3s;
+}
 
-      visibility: hidden;
+#toast.show {
+  opacity: 1;
 
-      transition: .3s;
-    }
+  visibility: visible;
 
-    #toast.show {
-      opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
-      visibility: visible;
 
-      transform: translateX(-50%) translateY(0);
-    }
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
+@media(max-width: 700px) {
 
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
+  section {
+    padding: 80px 0;
+  }
 
-    @media(max-width: 700px) {
+  #home {
+    min-height: 100svh;
 
-      section {
-        padding: 80px 0;
-      }
+    padding-bottom: 80px;
+  }
 
-      #home {
-        min-height: 100svh;
+  .opening-names {
+    font-size: clamp(55px, 18vw, 90px);
+  }
 
-        padding-bottom: 80px;
-      }
+  .couple-grid {
+    grid-template-columns: 1fr;
 
-      .opening-names {
-        font-size: clamp(55px, 18vw, 90px);
-      }
+    gap: 60px;
+  }
 
-      .couple-grid {
-        grid-template-columns: 1fr;
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        gap: 60px;
-      }
+  .count-item:nth-child(2) {
+    border-right: none;
+  }
 
-      .countdown {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .count-item:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
 
-      .count-item:nth-child(2) {
-        border-right: none;
-      }
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .count-item:nth-child(-n+2) {
-        border-bottom: 1px solid var(--line);
-      }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
 
-      .event-grid {
-        grid-template-columns: 1fr;
-      }
+  .g1,
+  .g2,
+  .g3,
+  .g4 {
+    grid-column: span 1;
 
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
+    height: 300px;
+  }
 
-      .g1,
-      .g2,
-      .g3,
-      .g4 {
-        grid-column: span 1;
+  .g1,
+  .g4 {
+    grid-column: span 2;
+  }
 
-        height: 300px;
-      }
+  .story::before {
+    left: 10px;
+  }
 
-      .g1,
-      .g4 {
-        grid-column: span 2;
-      }
+  .story-item,
+  .story-item:nth-child(even) {
+    width: 100%;
 
-      .story::before {
-        left: 10px;
-      }
+    margin-left: 0;
 
-      .story-item,
-      .story-item:nth-child(even) {
-        width: 100%;
+    padding-left: 40px;
+  }
 
-        margin-left: 0;
+  .rsvp-box {
+    padding: 30px 20px;
+  }
 
-        padding-left: 40px;
-      }
+  nav a {
+    width: 35px;
+    height: 35px;
+  }
 
-      .rsvp-box {
-        padding: 30px 20px;
-      }
+  nav {
+    bottom: 15px;
+  }
 
-      nav a {
-        width: 35px;
-        height: 35px;
-      }
+  #musicButton {
+    right: 15px;
+    bottom: 75px;
+  }
 
-      nav {
-        bottom: 15px;
-      }
+  .gift-card {
+    padding: 35px 20px;
+  }
 
-      #musicButton {
-        right: 15px;
-        bottom: 75px;
-      }
+}
 
-      .gift-card {
-        padding: 35px 20px;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body class="locked">
 
 
-<!-- =========================================================
+<!-- =====================================================
      OPENING
-========================================================= -->
+===================================================== -->
 
 <div id="opening">
 
@@ -1165,9 +1161,9 @@
 </div>
 
 
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
 <nav id="navbar">
 
@@ -1184,22 +1180,12 @@
 </nav>
 
 
-<!-- =========================================================
+<!-- =====================================================
      MUSIC
-========================================================= -->
+===================================================== -->
 
 <audio id="weddingMusic" loop>
-
-  <!--
-    GANTI music.mp3
-    dengan file musik kamu.
-
-    Contoh:
-    <source src="music.mp3" type="audio/mpeg">
-  -->
-
   <source src="music.mp3" type="audio/mpeg">
-
 </audio>
 
 <button
@@ -1212,9 +1198,9 @@
 </button>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
 
 <section id="home">
 
@@ -1243,9 +1229,9 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      INTRO
-========================================================= -->
+===================================================== -->
 
 <section class="intro">
 
@@ -1273,9 +1259,9 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      COUPLE
-========================================================= -->
+===================================================== -->
 
 <section id="couple">
 
@@ -1305,6 +1291,7 @@
 
     <div class="couple-grid">
 
+
       <!-- MEMPELAI PRIA -->
 
       <div class="person reveal">
@@ -1312,7 +1299,7 @@
         <div class="person-photo">
 
           <img
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=85"
+            src="foto-budi.jpg"
             alt="Mempelai Pria">
 
         </div>
@@ -1335,7 +1322,7 @@
         <div class="person-photo">
 
           <img
-            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=85"
+            src="foto-lusi.jpg"
             alt="Mempelai Wanita">
 
         </div>
@@ -1350,6 +1337,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1357,9 +1345,9 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      COUNTDOWN
-========================================================= -->
+===================================================== -->
 
 <section id="countdown">
 
@@ -1387,7 +1375,9 @@
         <div
           class="count-number"
           id="days">
+
           00
+
         </div>
 
         <div class="count-label">
@@ -1402,7 +1392,9 @@
         <div
           class="count-number"
           id="hours">
+
           00
+
         </div>
 
         <div class="count-label">
@@ -1417,7 +1409,9 @@
         <div
           class="count-number"
           id="minutes">
+
           00
+
         </div>
 
         <div class="count-label">
@@ -1432,7 +1426,9 @@
         <div
           class="count-number"
           id="seconds">
+
           00
+
         </div>
 
         <div class="count-label">
@@ -1448,9 +1444,9 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      EVENT
-========================================================= -->
+===================================================== -->
 
 <section id="event">
 
@@ -1473,1092 +1469,5 @@
 
     <div class="event-grid">
 
-      <!-- AKAD -->
 
-      <div class="event-card reveal">
-
-        <div class="event-number">
-          01
-        </div>
-
-        <div class="event-title">
-          Akad Nikah
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="event-info">
-
-          Rabu, 23 September 2026
-
-          <br>
-
-          08.00 — 10.00 WIB
-
-          <br>
-
-          <strong>
-            GANTI NAMA TEMPAT
-          </strong>
-
-          <br>
-
-          GANTI ALAMAT LENGKAP
-
-        </div>
-
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          class="map-button">
-
-          Lihat Lokasi
-
-        </a>
-
-      </div>
-
-
-      <!-- RESEPSI -->
-
-      <div class="event-card reveal">
-
-        <div class="event-number">
-          02
-        </div>
-
-        <div class="event-title">
-          Resepsi
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="event-info">
-
-          Rabu, 23 September 2026
-
-          <br>
-
-          11.00 — 14.00 WIB
-
-          <br>
-
-          <strong>
-            GANTI NAMA TEMPAT
-          </strong>
-
-          <br>
-
-          GANTI ALAMAT LENGKAP
-
-        </div>
-
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          class="map-button">
-
-          Lihat Lokasi
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     GALLERY
-========================================================= -->
-
-<section id="gallery">
-
-  <div class="container">
-
-    <div class="center reveal">
-
-      <div class="eyebrow">
-        Our moments
-      </div>
-
-      <div class="section-title">
-        A collection of
-        <br>
-        <span>memories.</span>
-      </div>
-
-    </div>
-
-
-    <div class="gallery">
-
-      <div class="gallery-item g1 reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=85"
-          alt="Foto Pernikahan">
-
-      </div>
-
-
-      <div class="gallery-item g2 reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"
-          alt="Foto Pernikahan">
-
-      </div>
-
-
-      <div class="gallery-item g3 reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85"
-          alt="Foto Pernikahan">
-
-      </div>
-
-
-      <div class="gallery-item g4 reveal">
-
-        <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=85"
-          alt="Foto Pernikahan">
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     STORY
-========================================================= -->
-
-<section id="story">
-
-  <div class="container">
-
-    <div class="center reveal">
-
-      <div class="eyebrow">
-        Our journey
-      </div>
-
-      <div class="section-title">
-        From then
-        <br>
-        <span>to forever.</span>
-      </div>
-
-    </div>
-
-
-    <div class="story">
-
-      <div class="story-item reveal">
-
-        <div class="story-year">
-          2022
-        </div>
-
-        <div class="story-title">
-          The Beginning
-        </div>
-
-        <div class="story-text">
-          Semua berawal dari sebuah pertemuan
-          sederhana yang ternyata menjadi awal
-          dari cerita panjang kami.
-        </div>
-
-      </div>
-
-
-      <div class="story-item reveal">
-
-        <div class="story-year">
-          2023
-        </div>
-
-        <div class="story-title">
-          Growing Together
-        </div>
-
-        <div class="story-text">
-          Kami mulai mengenal satu sama lain
-          lebih dalam dan melewati banyak
-          cerita bersama.
-        </div>
-
-      </div>
-
-
-      <div class="story-item reveal">
-
-        <div class="story-year">
-          2025
-        </div>
-
-        <div class="story-title">
-          The Promise
-        </div>
-
-        <div class="story-text">
-          Kami memutuskan untuk melangkah
-          bersama menuju sebuah kehidupan
-          yang baru.
-        </div>
-
-      </div>
-
-
-      <div class="story-item reveal">
-
-        <div class="story-year">
-          2026
-        </div>
-
-        <div class="story-title">
-          Forever Starts
-        </div>
-
-        <div class="story-text">
-          Hari di mana dua perjalanan menjadi
-          satu cerita untuk selamanya.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     RSVP
-========================================================= -->
-
-<section id="rsvp">
-
-  <div class="container">
-
-    <div class="center reveal">
-
-      <div class="eyebrow">
-        RSVP
-      </div>
-
-      <div class="section-title">
-        Will you
-        <br>
-        <span>join us?</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <p class="muted">
-        Mohon konfirmasi kehadiran Anda.
-      </p>
-
-    </div>
-
-
-    <div class="rsvp-box reveal">
-
-      <form id="rsvpForm">
-
-        <div class="form-group">
-
-          <label>
-            Nama
-          </label>
-
-          <input
-            type="text"
-            id="guestName"
-            placeholder="Nama lengkap"
-            required>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Kehadiran
-          </label>
-
-          <select
-            id="attendance"
-            required>
-
-            <option value="">
-              Pilih kehadiran
-            </option>
-
-            <option value="Hadir">
-              Saya akan hadir
-            </option>
-
-            <option value="Tidak Hadir">
-              Saya tidak dapat hadir
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Jumlah Tamu
-          </label>
-
-          <select id="guestCount">
-
-            <option value="1">
-              1 Orang
-            </option>
-
-            <option value="2">
-              2 Orang
-            </option>
-
-            <option value="3">
-              3 Orang
-            </option>
-
-            <option value="4">
-              4 Orang
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Ucapan
-          </label>
-
-          <textarea
-            id="guestMessage"
-            placeholder="Tulis ucapan untuk kedua mempelai..."></textarea>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="submit-button">
-
-          Kirim RSVP
-
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     WISHES
-========================================================= -->
-
-<section id="wishes">
-
-  <div class="container">
-
-    <div class="center reveal">
-
-      <div class="eyebrow">
-        Wishes
-      </div>
-
-      <div class="section-title">
-        Your words,
-        <br>
-        <span>our memories.</span>
-      </div>
-
-    </div>
-
-
-    <div
-      class="wishes"
-      id="wishesContainer">
-
-      <div class="empty-wishes">
-        Belum ada ucapan.
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     GIFT
-========================================================= -->
-
-<section id="gift">
-
-  <div class="container">
-
-    <div class="center reveal">
-
-      <div class="eyebrow">
-        Wedding Gift
-      </div>
-
-      <div class="section-title">
-        Your love
-        <br>
-        <span>is enough.</span>
-      </div>
-
-      <div class="divider"></div>
-
-      <p class="muted">
-        Bagi keluarga dan sahabat yang ingin
-        memberikan tanda kasih, dapat melalui
-        informasi berikut.
-      </p>
-
-    </div>
-
-
-    <div class="gift-card reveal">
-
-      <div class="bank">
-        BCA
-      </div>
-
-      <div class="account-number">
-        1234567890
-      </div>
-
-      <div class="account-name">
-        A/N BUDI
-      </div>
-
-      <button
-        type="button"
-        class="copy-button"
-        id="copyButton">
-
-        Salin Nomor Rekening
-
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-  <div class="footer-names">
-    Budi & Lusi
-  </div>
-
-  <div class="footer-date">
-    23 · 09 · 2026
-  </div>
-
-</footer>
-
-
-<!-- TOAST -->
-
-<div id="toast">
-  Berhasil!
-</div>
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script>
-
-  /* =========================================================
-     OPEN INVITATION
-  ========================================================= */
-
-  const openButton =
-    document.getElementById("openInvitationButton");
-
-  const opening =
-    document.getElementById("opening");
-
-  const navbar =
-    document.getElementById("navbar");
-
-  const musicButton =
-    document.getElementById("musicButton");
-
-  const music =
-    document.getElementById("weddingMusic");
-
-
-  openButton.addEventListener("click", function () {
-
-    /*
-      1. Tutup cover
-    */
-
-    opening.classList.add("hide");
-
-
-    /*
-      2. Buka scroll halaman
-    */
-
-    document.body.classList.remove("locked");
-
-
-    /*
-      3. Tampilkan navigation
-    */
-
-    setTimeout(function () {
-
-      navbar.classList.add("show");
-
-      musicButton.classList.add("show");
-
-    }, 500);
-
-
-    /*
-      4. Coba mulai musik
-
-      Browser HP dapat memblokir autoplay.
-      Karena play() dipanggil setelah klik,
-      biasanya browser mengizinkannya.
-    */
-
-    music.play()
-      .then(function () {
-
-        musicButton.classList.add("playing");
-
-        musicButton.innerHTML = "❚❚";
-
-      })
-      .catch(function () {
-
-        console.log(
-          "Autoplay musik diblokir browser."
-        );
-
-      });
-
-  });
-
-
-  /* =========================================================
-     MUSIC
-  ========================================================= */
-
-  musicButton.addEventListener("click", function () {
-
-    if (music.paused) {
-
-      music.play()
-        .then(function () {
-
-          musicButton.classList.add("playing");
-
-          musicButton.innerHTML = "❚❚";
-
-        })
-        .catch(function () {
-
-          showToast(
-            "Musik belum tersedia."
-          );
-
-        });
-
-    } else {
-
-      music.pause();
-
-      musicButton.classList.remove("playing");
-
-      musicButton.innerHTML = "♪";
-
-    }
-
-  });
-
-
-  /* =========================================================
-     COUNTDOWN
-  ========================================================= */
-
-  /*
-    GANTI tanggal di bawah jika tanggal pernikahan berubah.
-
-    Format:
-    YYYY-MM-DDTHH:MM:SS
-  */
-
-  const weddingDate =
-    new Date("2026-09-23T08:00:00").getTime();
-
-
-  function updateCountdown() {
-
-    const now =
-      new Date().getTime();
-
-    const distance =
-      weddingDate - now;
-
-
-    if (distance <= 0) {
-
-      document.getElementById("days").innerHTML = "00";
-
-      document.getElementById("hours").innerHTML = "00";
-
-      document.getElementById("minutes").innerHTML = "00";
-
-      document.getElementById("seconds").innerHTML = "00";
-
-      return;
-
-    }
-
-
-    const days =
-      Math.floor(
-        distance /
-        (1000 * 60 * 60 * 24)
-      );
-
-
-    const hours =
-      Math.floor(
-        (distance %
-          (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-      );
-
-
-    const minutes =
-      Math.floor(
-        (distance %
-          (1000 * 60 * 60)) /
-        (1000 * 60)
-      );
-
-
-    const seconds =
-      Math.floor(
-        (distance %
-          (1000 * 60)) /
-        1000
-      );
-
-
-    document.getElementById("days").innerHTML =
-      String(days).padStart(2, "0");
-
-
-    document.getElementById("hours").innerHTML =
-      String(hours).padStart(2, "0");
-
-
-    document.getElementById("minutes").innerHTML =
-      String(minutes).padStart(2, "0");
-
-
-    document.getElementById("seconds").innerHTML =
-      String(seconds).padStart(2, "0");
-
-  }
-
-
-  updateCountdown();
-
-  setInterval(
-    updateCountdown,
-    1000
-  );
-
-
-  /* =========================================================
-     SCROLL REVEAL
-  ========================================================= */
-
-  const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-  const revealObserver =
-    new IntersectionObserver(
-
-      function (entries) {
-
-        entries.forEach(
-          function (entry) {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add(
-                "active"
-              );
-
-            }
-
-          }
-        );
-
-      },
-
-      {
-        threshold: 0.12
-      }
-
-    );
-
-
-  revealElements.forEach(
-    function (element) {
-
-      revealObserver.observe(element);
-
-    }
-  );
-
-
-  /* =========================================================
-     RSVP
-  ========================================================= */
-
-  const rsvpForm =
-    document.getElementById("rsvpForm");
-
-
-  rsvpForm.addEventListener(
-    "submit",
-    function (event) {
-
-      event.preventDefault();
-
-
-      const name =
-        document.getElementById(
-          "guestName"
-        ).value.trim();
-
-
-      const attendance =
-        document.getElementById(
-          "attendance"
-        ).value;
-
-
-      const guestCount =
-        document.getElementById(
-          "guestCount"
-        ).value;
-
-
-      const message =
-        document.getElementById(
-          "guestMessage"
-        ).value.trim();
-
-
-      if (!name || !attendance) {
-
-        showToast(
-          "Mohon lengkapi data."
-        );
-
-        return;
-
-      }
-
-
-      const wishes =
-        JSON.parse(
-          localStorage.getItem(
-            "weddingWishes"
-          ) || "[]"
-        );
-
-
-      wishes.push({
-
-        name: name,
-
-        attendance: attendance,
-
-        guestCount: guestCount,
-
-        message:
-          message ||
-          "Semoga menjadi keluarga yang bahagia.",
-
-        date:
-          new Date().toLocaleDateString(
-            "id-ID"
-          )
-
-      });
-
-
-      localStorage.setItem(
-        "weddingWishes",
-        JSON.stringify(wishes)
-      );
-
-
-      rsvpForm.reset();
-
-
-      renderWishes();
-
-
-      showToast(
-        "RSVP berhasil dikirim."
-      );
-
-
-      setTimeout(
-        function () {
-
-          document
-            .getElementById("wishes")
-            .scrollIntoView({
-              behavior: "smooth"
-            });
-
-        },
-
-        800
-
-      );
-
-    }
-  );
-
-
-  /* =========================================================
-     RENDER WISHES
-  ========================================================= */
-
-  function renderWishes() {
-
-    const container =
-      document.getElementById(
-        "wishesContainer"
-      );
-
-
-    const wishes =
-      JSON.parse(
-        localStorage.getItem(
-          "weddingWishes"
-        ) || "[]"
-      );
-
-
-    if (wishes.length === 0) {
-
-      container.innerHTML = `
-        <div class="empty-wishes">
-          Belum ada ucapan.
-        </div>
-      `;
-
-      return;
-
-    }
-
-
-    container.innerHTML =
-      wishes
-        .slice()
-        .reverse()
-        .map(
-          function (wish) {
-
-            return `
-
-              <div class="wish">
-
-                <div class="wish-name">
-                  ${escapeHTML(wish.name)}
-                </div>
-
-                <div class="wish-message">
-
-                  ${escapeHTML(wish.message)}
-
-                  <br><br>
-
-                  <span style="color:#666">
-                    ${escapeHTML(wish.attendance)}
-                    ·
-                    ${escapeHTML(wish.guestCount)}
-                    orang
-                  </span>
-
-                </div>
-
-              </div>
-
-            `;
-
-          }
-        )
-        .join("");
-
-  }
-
-
-  /* =========================================================
-     SECURITY
-  ========================================================= */
-
-  function escapeHTML(text) {
-
-    const div =
-      document.createElement("div");
-
-    div.textContent =
-      text;
-
-    return div.innerHTML;
-
-  }
-
-
-  renderWishes();
-
-
-  /* =========================================================
-     COPY ACCOUNT NUMBER
-  ========================================================= */
-
-  const copyButton =
-    document.getElementById(
-      "copyButton"
-    );
-
-
-  copyButton.addEventListener(
-    "click",
-    function () {
-
-      const accountNumber =
-        "1234567890";
-
-
-      navigator.clipboard
-        .writeText(accountNumber)
-        .then(
-          function () {
-
-            showToast(
-              "Nomor rekening disalin."
-            );
-
-          }
-        )
-        .catch(
-          function () {
-
-            showToast(
-              "Gagal menyalin nomor."
-            );
-
-          }
-        );
-
-    }
-  );
-
-
-  /* =========================================================
-     TOAST
-  ========================================================= */
-
-  let toastTimer;
-
-
-  function showToast(message) {
-
-    const toast =
-      document.getElementById(
-        "toast"
-      );
-
-
-    toast.innerHTML =
-      message;
-
-
-    toast.classList.add(
-      "show"
-    );
-
-
-    clearTimeout(
-      toastTimer
-    );
-
-
-    toastTimer =
-      setTimeout(
-        function () {
-
-          toast.classList.remove(
-            "show"
-          );
-
-        },
-
-        2500
-
-      );
-
-  }
-
-</script>
-
-
-</body>
-</html>
+      <!-- A
