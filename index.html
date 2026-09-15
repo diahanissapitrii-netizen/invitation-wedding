@@ -2393,7 +2393,50 @@
       );
 
   }
+function openInvitation() {
 
+  const opening = document.getElementById("opening");
+  const navbar = document.getElementById("navbar");
+  const musicButton = document.getElementById("musicButton");
+  const music = document.getElementById("weddingMusic");
+
+  // Tutup halaman pembuka
+  if (opening) {
+    opening.classList.add("hide");
+  }
+
+  // Buka scroll halaman
+  document.body.classList.remove("locked");
+
+  // Tampilkan menu
+  if (navbar) {
+    navbar.classList.add("show");
+  }
+
+  // Tampilkan tombol musik
+  if (musicButton) {
+    musicButton.classList.add("show");
+  }
+
+  // Putar musik
+  if (music) {
+    music.play()
+      .then(function() {
+
+        if (musicButton) {
+          musicButton.classList.add("playing");
+          musicButton.innerHTML = "❚❚";
+        }
+
+      })
+      .catch(function(error) {
+
+        console.log("Musik tidak bisa diputar:", error);
+
+      });
+  }
+
+}
 </script>
 
 
