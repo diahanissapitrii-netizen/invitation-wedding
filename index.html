@@ -2393,6 +2393,8 @@
       );
 
   }
+<script>
+
 function openInvitation() {
 
   const opening = document.getElementById("opening");
@@ -2405,10 +2407,10 @@ function openInvitation() {
     opening.classList.add("hide");
   }
 
-  // Buka scroll halaman
+  // Aktifkan scroll
   document.body.classList.remove("locked");
 
-  // Tampilkan menu
+  // Tampilkan navbar
   if (navbar) {
     navbar.classList.add("show");
   }
@@ -2421,7 +2423,7 @@ function openInvitation() {
   // Putar musik
   if (music) {
     music.play()
-      .then(function() {
+      .then(() => {
 
         if (musicButton) {
           musicButton.classList.add("playing");
@@ -2429,14 +2431,15 @@ function openInvitation() {
         }
 
       })
-      .catch(function(error) {
+      .catch(() => {
 
-        console.log("Musik tidak bisa diputar:", error);
+        console.log("Musik belum dapat diputar.");
 
       });
   }
 
 }
+
 </script>
 
 
